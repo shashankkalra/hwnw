@@ -29,6 +29,12 @@
                 android:value="com.skapps.knowMore.MainActivity" />
         </activity>
 
+        <provider
+            android:name=".UserProfileProvider"
+            android:authorities="@string/preferences_authority"
+            android:exported="false"
+            />
+
     </application>
 
 </manifest>

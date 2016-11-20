@@ -35,7 +35,7 @@ public class UserProfileProvider extends ContentProvider {
 
     private static void init(Context context){
 
-        PREFFERENCE_AUTHORITY = context.getString(R.string.multiprocess_preferences_authority);
+        PREFFERENCE_AUTHORITY = context.getString(R.string.preferences_authority);
 
         matcher = new UriMatcher(UriMatcher.NO_MATCH);
         matcher.addURI(PREFFERENCE_AUTHORITY, "*/*", MATCH_DATA);
