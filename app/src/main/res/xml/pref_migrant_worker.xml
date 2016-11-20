@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:dependency="migrant_worker">
+
+    <CheckBoxPreference
+        android:key="migrant_worker"
+        android:title="@string/pref_title_migrant_worker"
+        android:summary="@string/pref_description_migrant_worker"
+        android:defaultValue="false"
+        />
+
+    <EditTextPreference android:dependency="migrant_worker"
+        android:key="work_profession"
+        android:title="@string/work_profession"
+        android:selectAllOnFocus="true"
+        android:inputType="textCapWords"
+        android:capitalize="words"
+        android:singleLine="true"
+        android:maxLines="1"
+        />
+
+    <ListPreference android:dependency="migrant_worker"
+        android:key="hometown_state"
+        android:title="@string/hometown_state"
+        android:entries="@array/state_values"
+        android:entryValues="@array/state_values"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:summary="@string/set_state"/>
+
+    <!-- NOTE: EditTextPreference accepts EditText attributes. -->
+    <!-- NOTE: EditTextPreference's summary should be set to its value by the activity code. -->
+    <EditTextPreference android:dependency="migrant_worker"
+        android:key="hometown_city"
+        android:title="@string/current_city"
+        android:selectAllOnFocus="true"
+        android:inputType="textCapWords"
+        android:capitalize="words"
+        android:singleLine="true"
+        android:maxLines="1"
+        />
+
+    <EditTextPreference android:dependency="migrant_worker"
+        android:key="skillset"
+        android:title="@string/skillset"
+        android:selectAllOnFocus="true"
+        android:inputType="textCapWords"
+        android:capitalize="words"
+        android:singleLine="true"
+        android:maxLines="1"
+        />
+
+</PreferenceScreen>

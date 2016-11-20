@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Know More</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">My Profile</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="title_activity_tabbed_activity2">TabbedActivity2</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="welcomeMessage">Welcome! Please provide details by clicking edit profile button below, to enable the app to help you.</string>
+    <string name="edit_my_profile">Edit My Profile</string>
+    <string name="hello">Hello !!</string>
+    <string name="title_activity_fullscreen_splash">FullscreenSplashActivity</string>
+    <string name="multiprocess_preferences_authority" translatable="false">com.skapps.knowMore.PREFFERENCE_AUTHORITY</string>
+
+</resources>

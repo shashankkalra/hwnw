@@ -1,0 +1,302 @@
+<resources>
+    <string name="title_activity_settings">My Profile</string>
+
+    <string name="pref_header_general">General</string>
+    <string name="pref_header_select_profiles">Select your profile(s)</string>
+    <string name="pref_header_farmer">Farmer details</string>
+    <string name="pref_header_student">Student details</string>
+    <string name="pref_header_migrant_worker">Migrant worker details</string>
+    <string name="pref_header_other">Other details</string>
+
+    <!-- Strings related to Settings -->
+
+    <string name="let_us_know_about_you">A few anonymous details about you</string>
+
+    <!-- Example General settings -->
+
+    <string name="set_gender">Select your gender</string>
+
+    <string name="set_state">Select your current state of residence</string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="gender">Gender</string>
+    <string name="current_state">Presently residing in State</string>
+    <string name="current_city">and City/Area (you will get news for this city/area)</string>
+
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="gender_values">
+        <item>Female</item>
+        <item>Male</item>
+    </string-array>
+
+    <string-array name="state_values">
+        <item>Andaman and Nicobar Islands</item>
+        <item>Andhra Pradesh</item>
+        <item>Arunachal Pradesh</item>
+        <item>Assam</item>
+        <item>Bihar</item>
+        <item>Chandigarh</item>
+        <item>Chhattisgarh</item>
+        <item>Dadra and Nagar Haveli</item>
+        <item>Daman and Diu</item>
+        <item>Delhi</item>
+        <item>Goa</item>
+        <item>Gujarat</item>
+        <item>Haryana</item>
+        <item>Himachal Pradesh</item>
+        <item>Jammu and Kashmir</item>
+        <item>Jharkhand</item>
+        <item>Karnataka</item>
+        <item>Kerala</item>
+        <item>Lakshadweep</item>
+        <item>Madhya Pradesh</item>
+        <item>Maharashtra</item>
+        <item>Manipur</item>
+        <item>Meghalaya</item>
+        <item>Mizoram</item>
+        <item>Nagaland</item>
+        <item>Odisha[</item>
+        <item>Puducherry</item>
+        <item>Punjab</item>
+        <item>Rajasthan</item>
+        <item>Sikkim</item>
+        <item>Tamil Nadu</item>
+        <item>Telangana</item>
+        <item>Tripura</item>
+        <item>Uttar Pradesh</item>
+        <item>Uttarakhand</item>
+        <item>West Bengal</item>
+    </string-array>
+
+
+    <string-array name="profile_titles">
+        <item>Farmer</item>
+        <item>Student</item>
+        <item>Migrant Worker</item>
+        <item>None of the above</item>
+    </string-array>
+    <string-array name="profile_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+    <string-array name="crop_values">
+        <item>Sugarcane</item>
+        <item>Pumpkin</item>
+        <item>Maize(Corn)</item>
+        <item>Wheat</item>
+        <item>Rice</item>
+        <item>Cassava</item>
+        <item>Soybean</item>
+        <item>Hay</item>
+        <item>Potato</item>
+        <item>Cotton</item>
+        <item>Jowar</item>
+        <item>Ragi/Bajra(Millet)</item>
+        <item>Sorghum</item>
+        <item>Mung Bean(Green Gram)</item>
+        <item>Urad Bean(Black Gram)</item>
+        <item>Guar</item>
+        <item>Pea</item>
+        <item>Peanut(Groundnut)</item>
+        <item>Barley</item>
+        <item>Mustard</item>
+        <item>Sesame</item>
+        <item>Pulses</item>
+        <item>Jute</item>
+        <item>Tobacco</item>
+        <item>Tea</item>
+        <item>Coffee</item>
+        <item>Coconut</item>
+        <item>Rubber</item>
+        <item>Cardamom</item>
+        <item>Nutmeg</item>
+        <item>Garlic</item>
+        <item>Turmeric</item>
+        <item>Ginger</item>
+        <item>Chillies/Peppers</item>
+        <item>Coriander</item>
+        <item>Fennel</item>
+    </string-array>
+    <string-array name="degree_values">
+        <item>Bachelor Hotel Management and Catering Technology</item>
+        <item>Bachelor Library Science</item>
+        <item>Bachelor of Applied Sciences</item>
+        <item>Bachelor of Architecture</item>
+        <item>Bachelor of Education</item>
+        <item>Bachelor of Law</item>
+        <item>Bachelor of Arts</item>
+        <item>Bachelor of Audiology and Speech Language Pathology</item>
+        <item>Bachelor of Ayurvedic Medicine and Surgery</item>
+        <item>Bachelor of Business Administration</item>
+        <item>Bachelor of Business Management</item>
+        <item>Bachelor of Business Studies</item>
+        <item>Bachelor of Commerce</item>
+        <item>Bachelor of Communication Journalism</item>
+        <item>Bachelor of Computer Applications</item>
+        <item>Bachelor of Computer Science</item>
+        <item>Bachelor of Dental Surgery</item>
+        <item>Bachelor of Design</item>
+        <item>Bachelor of Electronic Science</item>
+        <item>Bachelor of Elementary Education</item>
+        <item>Bachelor of Engineering</item>
+        <item>Bachelor of Fashion Technology</item>
+        <item>Bachelor of Financial Investment and Analysis</item>
+        <item>Bachelor of Fine Arts</item>
+        <item>Bachelor of Fishery Sciences</item>
+        <item>Bachelor of General Law</item>
+        <item>Bachelor of Homeopathic Medicine And Surgery</item>
+        <item>Bachelor of Hospitality and Tourism Management</item>
+        <item>Bachelor of Hotel Management</item>
+        <item>Bachelor of Information Systems Management</item>
+        <item>Bachelor of Labour Management</item>
+        <item>Bachelor of Library and Information Science</item>
+        <item>Bachelor of Literature</item>
+        <item>Bachelor of Medical Laboratory Technology</item>
+        <item>Bachelor of Medical Record Science</item>
+        <item>Bachelor of Medical Technology</item>
+        <item>Bachelor of Medicine Bachelor of Surgery</item>
+        <item>Bachelor of Mental Retardation</item>
+        <item>Bachelor of Naturopathy and Yogic Sciences</item>
+        <item>Bachelor of Occupational Therapy</item>
+        <item>Bachelor of Optometry and Vision Science</item>
+        <item>Bachelor of Pharmacy</item>
+        <item>Bachelor Of Physical Education</item>
+        <item>Bachelor of Physiotherapy</item>
+        <item>Bachelor of Public Relations</item>
+        <item>Bachelor of Science Education</item>
+        <item>Bachelor of Science</item>
+        <item>Bachelor Of Social Work</item>
+        <item>Bachelor of Speech Language And Audiology</item>
+        <item>Bachelor of Tourism Administration</item>
+        <item>Bachelor of Unani Medicine And Surgery</item>
+        <item>Bachelor of Veterinary Science</item>
+        <item>Bachelors of Technology</item>
+        <item>Basic Training Certificate</item>
+        <item>Behavioral Healthcare Education</item>
+        <item>Under Graduate Basic Training</item>
+        <item>Under Graduate Teacher Training</item>
+        <item>Under Graduate Training</item>
+        <item>Doctor of Medicine Unani</item>
+        <item>Doctor of Medicine</item>
+        <item>Executive Fellow Program In Management</item>
+        <item>Executive Management Programme</item>
+        <item>Fellow Programme in Management</item>
+        <item>Management Development Programme</item>
+        <item>Master of Architecture</item>
+        <item>Master of Arts in Management</item>
+        <item>Master of Arts in Personal Management</item>
+        <item>Master of Arts in Theatre And Television</item>
+        <item>Master of Arts</item>
+        <item>Master of Audiology And Speech Language Pathology</item>
+        <item>Master of Business Administration</item>
+        <item>Master of Business Economics</item>
+        <item>Master of Business Laws</item>
+        <item>Master of Business Management</item>
+        <item>Master of Business Studies</item>
+        <item>Master of Commerce</item>
+        <item>Master of Communication And Journalism</item>
+        <item>Master of Comparative Laws</item>
+        <item>Master of Computer Applications</item>
+        <item>Master of Computer Management</item>
+        <item>Master of Corporate Secretaryship</item>
+        <item>Master of Dental Surgery</item>
+        <item>Master of Education</item>
+        <item>Master of Engineering</item>
+        <item>Master of Film Management</item>
+        <item>Master of Finance And Control</item>
+        <item>Master of Financial Services</item>
+        <item>Master of Fine Arts</item>
+        <item>Master of Fishery Sciences</item>
+        <item>Master of Foreign Trade</item>
+        <item>Master Of Health Science</item>
+        <item>Master of Hospital Administration</item>
+        <item>Master of Hospitality And Hotel Management</item>
+        <item>Master of Hospitality Management</item>
+        <item>Master of Human Resource Management</item>
+        <item>Master of Industrial Relation and Personal Management</item>
+        <item>Master of Information Management</item>
+        <item>Master of International Business</item>
+        <item>Master of Journalism</item>
+        <item>Master of Labour Management</item>
+        <item>Master of Law</item>
+        <item>Master of Library and Information Science</item>
+        <item>Master of Library Science</item>
+        <item>Master of Management Program</item>
+        <item>Master of Management Studies</item>
+        <item>Master of Marketing Management</item>
+        <item>Master of Occupational Theraphy</item>
+        <item>Master of Performance Management</item>
+        <item>Master of Performing Arts</item>
+        <item>Master of Personal Management and Industrial Relation</item>
+        <item>Master of Personnel Management</item>
+        <item>Master of Pharmacy</item>
+        <item>Master of Philosophy</item>
+        <item>Master Of Physical Education</item>
+        <item>Master of Physiotheraphy</item>
+        <item>Master of Psychiatric Epidemiology</item>
+        <item>Master of Public Health</item>
+        <item>Master of Science</item>
+        <item>Master of Social Dynamics</item>
+        <item>Master of Social Work</item>
+        <item>Master of Technology</item>
+        <item>Master of Tourism Administrations</item>
+        <item>Master of Tourism Management</item>
+        <item>Master of Veterinary Science</item>
+        <item>Masters of Hospitality and Tourism Management</item>
+        <item>Masters of Public Systems Management</item>
+        <item>Masters Programme in International Business</item>
+        <item>Masters Programme In Sports Physiotheraphy</item>
+    </string-array>
+
+    <string name="pref_title_indian_cricket">Indian Cricket</string>
+    <string name="pref_title_farmer">Farmer</string>
+    <string name="pref_description_farmer">Select this checkbox if you are a farmer and also provide other related details below</string>
+    <string name="pref_title_student">Student</string>
+    <string name="pref_description_student">Select this checkbox if you are a student and also provide other related details below</string>
+    <string name="pref_title_migrant_worker">Migrant Worker</string>
+    <string name="pref_description_migrant_worker">Select this checkbox if you are a migrant worker and also provide other related details below</string>
+    <string name="crop">Crop that you grow</string>
+    <string name="degree">Degree pursuing</string>
+    <string name="pref_title_bollywood_stars">Bollywood Stars</string>
+    <string name="pref_title_learn_english">Learn English</string>
+    <string name="subject">Subject</string>
+    <string name="college">College</string>
+    <string name="work_profession">Work as</string>
+    <string name="hometown_state">Hometown State</string>
+    <string name="skillset">Skill set ( eg value - driving cooking gardening )</string>
+    <string name="pref_description_indian_cricket">Get news about Indian Cricket</string>
+    <string name="pref_description_bollywood_stars">Get news about bollywood movies and stars</string>
+    <string name="pref_description_learn_english">Get tips on learning english language</string>
+    <string name="pref_mandatoryInputsNotGiven">mandatoryInputsNotGiven</string>
+    <string name="pref_title_health">Health tips</string>
+    <string name="pref_description_health">Check this box if you want health tips</string>
+    <string name="pref_title_personal_finance">Personal Finance Tips</string>
+    <string name="pref_description_personal_finance">Check this box to get personal finance tips</string>
+</resources>

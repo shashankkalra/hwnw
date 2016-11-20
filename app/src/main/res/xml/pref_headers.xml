@@ -1,0 +1,19 @@
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- These settings headers are only used on tablets. -->
+
+    <header android:title="@string/let_us_know_about_you" />
+
+    <header android:fragment="com.skapps.knowMore.SettingsActivity$GeneralPreferenceFragment"
+        android:title="@string/pref_header_general" />
+
+    <header android:fragment="com.skapps.knowMore.SettingsActivity$FarmerPreferenceFragment"
+        android:title="@string/pref_header_farmer" />
+
+    <header android:fragment="com.skapps.knowMore.SettingsActivity$StudentPreferenceFragment"
+        android:title="@string/pref_header_student" />
+
+    <header android:fragment="com.skapps.knowMore.SettingsActivity$OtherPreferenceFragment"
+        android:title="@string/pref_header_other" />
+
+</preference-headers>

@@ -1,0 +1,19 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:dependency="farmer">
+
+    <CheckBoxPreference
+        android:key="farmer"
+        android:title="@string/pref_title_farmer"
+        android:summary="@string/pref_description_farmer"
+        android:defaultValue="false"
+        />
+
+    <ListPreference android:dependency="farmer"
+        android:key="crop"
+        android:title="@string/crop"
+        android:entries="@array/crop_values"
+        android:entryValues="@array/crop_values"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        />
+
+</PreferenceScreen>

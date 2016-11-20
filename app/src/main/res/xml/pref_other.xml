@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBoxPreference
+        android:key="indian_cricket"
+        android:title="@string/pref_title_indian_cricket"
+        android:summary="@string/pref_description_indian_cricket"
+        android:defaultValue="false"
+        />
+
+    <CheckBoxPreference
+        android:key="bollywood_stars"
+        android:title="@string/pref_title_bollywood_stars"
+        android:summary="@string/pref_description_bollywood_stars"
+        android:defaultValue="false"
+        />
+
+    <CheckBoxPreference
+        android:key="learn_english"
+        android:title="@string/pref_title_learn_english"
+        android:summary="@string/pref_description_learn_english"
+        android:defaultValue="false"
+        />
+
+    <CheckBoxPreference
+        android:key="health"
+        android:title="@string/pref_title_health"
+        android:summary="@string/pref_description_health"
+        android:defaultValue="true"
+        />
+
+    <CheckBoxPreference
+        android:key="finance"
+        android:title="@string/pref_title_personal_finance"
+        android:summary="@string/pref_description_personal_finance"
+        android:defaultValue="true"
+        />
+
+</PreferenceScreen>
