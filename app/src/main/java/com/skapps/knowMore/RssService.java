@@ -2,10 +2,8 @@ package com.skapps.knowMore;
 
 import android.app.IntentService;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.ResultReceiver;
-import android.preference.PreferenceManager;
 import android.util.Log;
 
 import org.xmlpull.v1.XmlPullParserException;
@@ -86,35 +84,35 @@ public class RssService extends IntentService {
     private String isURLApplicable(String urlKey) {
 
         String headingAndURL = null;
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        UserProfileProvider.SharedPreferencesWrapper prefs = UserProfileProvider.getDefaultSharedPreferences(getBaseContext());
 
-        Map<String, ?> prefMap = prefs.getAll();
-        Log.d("pref map url -- " , prefMap.toString());
+        //Map<String, ?> prefMap = prefs.getAll();
+        Log.d("pref map url -- " , prefs.toString());
 
-        Boolean mandatoryInputsNotGiven = (Boolean) prefMap.get("mandatoryInputsNotGiven");
+        Boolean mandatoryInputsNotGiven = prefs.getBoolean("mandatoryInputsNotGiven",true);
 
         if(mandatoryInputsNotGiven)
             return null;
 
 
-        String gender = (String) prefMap.get("gender");
+        String gender = prefs.getString("gender",null);
 
-        String current_state =  (String) prefMap.get("current_state");
-        String current_city =  (String) prefMap.get("current_city");
+        String current_state =  prefs.getString("current_state",null);
+        String current_city =  prefs.getString("current_city",null);
 
-        Boolean farmerOrNot = (Boolean) prefMap.get("farmer")== null ? false :(Boolean) prefMap.get("farmer");
-        String crop = (String) prefMap.get("crop")== null ? "" : (String) prefMap.get("crop");
+        Boolean farmerOrNot = prefs.getBoolean("farmer",false);
+        String crop = prefs.getString("crop","");
 
-        Boolean studentOrNot = (Boolean) prefMap.get("student") == null ? false: (Boolean) prefMap.get("student");
-        String degree = (String) prefMap.get("degree")== null ? "" :(String) prefMap.get("degree");
-        String subject = (String) prefMap.get("subject")== null ? "" :(String) prefMap.get("subject");
-        String college = (String) prefMap.get("college")== null ? "" :(String) prefMap.get("college");
+        Boolean studentOrNot = prefs.getBoolean("student",false);
+        String degree = prefs.getString("degree","");
+        String subject = prefs.getString("subject","");
+        String college = prefs.getString("college","");
 
-        Boolean indian_cricket = (Boolean) prefMap.get("indian_cricket")== null ? false:(Boolean) prefMap.get("indian_cricket");
-        Boolean bollywood_stars = (Boolean) prefMap.get("bollywood_stars")== null ? false:(Boolean) prefMap.get("bollywood_stars");
-        Boolean learn_english = (Boolean) prefMap.get("learn_english")== null ? false:(Boolean) prefMap.get("learn_english");
-        Boolean health = (Boolean) prefMap.get("health")== null ? true:(Boolean) prefMap.get("health");
-        Boolean finance = (Boolean) prefMap.get("finance")== null ? true:(Boolean) prefMap.get("finance");
+        Boolean indian_cricket = prefs.getBoolean("indian_cricket",false);
+        Boolean bollywood_stars = prefs.getBoolean("bollywood_stars",false);
+        Boolean learn_english = prefs.getBoolean("learn_english",false);
+        Boolean health = prefs.getBoolean("health",true);
+        Boolean finance = prefs.getBoolean("finance",true);
 
         switch(urlKey){
             case "city_news" : {
