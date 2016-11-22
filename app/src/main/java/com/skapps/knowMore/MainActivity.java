@@ -11,11 +11,12 @@ import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import java.util.Map;
+
+import timber.log.Timber;
 
 public class MainActivity extends ActionBarActivity implements SharedPreferences.OnSharedPreferenceChangeListener{
 
@@ -25,6 +26,11 @@ public class MainActivity extends ActionBarActivity implements SharedPreferences
     @Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
+        // Initialize timber
+        if (BuildConfig.DEBUG)
+            Timber.plant(new Timber.DebugTree());
+
 		setContentView(R.layout.main);
 
         checkPreferencesSetOrNotAndOpenSettingsIfRequired();
@@ -39,7 +45,7 @@ public class MainActivity extends ActionBarActivity implements SharedPreferences
         Boolean mandatoryInputsNotGiven = true;
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-        Log.d("Preferences -- ", prefs.toString());
+        Timber.d("Preferences -- " + prefs.toString());
         Map<String, ?> prefMap = prefs.getAll();
         String gender = (String) prefMap.get("gender");
 
@@ -54,7 +60,7 @@ public class MainActivity extends ActionBarActivity implements SharedPreferences
                 if(current_city != null && !"".equals(current_city))
                     mandatoryInputsNotGiven = false;
 
-        Log.d("Individual prefs - ", gender + current_state + current_city);
+        Timber.d("Individual prefs - " + gender + current_state + current_city);
 
         SharedPreferences.Editor edit = prefs.edit();
         edit.putBoolean(getString(R.string.pref_mandatoryInputsNotGiven), mandatoryInputsNotGiven);
@@ -144,18 +150,27 @@ public class MainActivity extends ActionBarActivity implements SharedPreferences
     }
 
     @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
     protected void onResume() {
         super.onResume();
         if(alertDialog == null || !alertDialog.isShowing()) {
             checkPreferencesSetOrNotAndOpenSettingsIfRequired();
         }
 
-        Log.i("calling activity","Calling package is -- " + getCallingPackage());
+        Timber.i("calling activity - Calling package is -- " + getCallingPackage());
 
         if(getCallingActivity() != null && getCallingActivity().getShortClassName().contains("Setting")) {
             refresh();
         }
-
     }
 
     @Override
@@ -173,7 +188,7 @@ public class MainActivity extends ActionBarActivity implements SharedPreferences
     @Override
     public boolean onNavigateUpFromChild(Activity child) {
 
-        Log.i("settings", "navigated up from settings");
+        Timber.i("Navigated up from settings");
 
         refresh();
         return super.onNavigateUpFromChild(child);

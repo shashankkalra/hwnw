@@ -6,7 +6,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.ResultReceiver;
 import android.preference.PreferenceManager;
-import android.util.Log;
 
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -19,6 +18,8 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+import timber.log.Timber;
+
 public class RssService extends IntentService {
 
     private Map<String,String> urlMap = new LinkedHashMap<String,String>();
@@ -29,11 +30,10 @@ public class RssService extends IntentService {
 	public RssService() {
 		super("RssService");
 
-        //urlMap.put("city_news","http://www.socialmention.com/search?q=<city>+<state>&t=news&f=rss");
         urlMap.put("city_news","https://news.google.co.in/news?pz=1&cf=all&ned=in&hl=en&q=<city>+<state>&output=rss");
         urlMap.put("indian_cricket","http://www.espncricinfo.com/rss/content/story/feeds/6.xml");
-        urlMap.put("college_news","http://www.socialmention.com/search?q=<college_name>&t=news&f=rss");
-        urlMap.put("crop_tips","http://api2.socialmention.com/search?q=<crop>+farming+india&t=news&f=rss");
+        urlMap.put("college_news","https://news.google.co.in/news/section?pz=1&cf=all&ned=in&hl=en&q=<college_name>&t=news&output=rss");
+        urlMap.put("crop_tips","https://news.google.co.in/news/section?pz=1&cf=all&ned=in&hl=en&q=<crop>+farming+india&output=rss");
         urlMap.put("bollywood_news","https://news.google.co.in/news?pz=1&cf=all&ned=in&hl=en&q=Bollywood&output=rss");
         urlMap.put("health_tips","http://doctor.ndtv.com/rssnews/ndtv/cat/healthtips/rss.html");
         urlMap.put("english_tips","http://englishonlinelearning.in/learn-through-indian-languaes.feed");
@@ -42,7 +42,7 @@ public class RssService extends IntentService {
 
 	@Override
 	protected void onHandleIntent(Intent intent) {
-		Log.d("Know More", "Service started");
+		Timber.d(R.string.app_name + "Service started");
 		List<RssItem> rssItems = new ArrayList<RssItem>();
         List<RssItem> tempRssItems = new ArrayList<RssItem>();
 			for(String urlKey : urlMap.keySet()) {
@@ -70,9 +70,9 @@ public class RssService extends IntentService {
                 }
 
             } catch (XmlPullParserException e) {
-                Log.w(e.getMessage(), e);
+                Timber.w(e.getMessage(), e);
             } catch (IOException e) {
-                Log.w(e.getMessage(), e);
+                Timber.w(e.getMessage(), e);
                 rssItems.add(new RssItem("Could not connect to internet. Connect to wifi or mobile data and click refresh icon above",null));
             }
             }
@@ -89,7 +89,7 @@ public class RssService extends IntentService {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
 
         Map<String, ?> prefMap = prefs.getAll();
-        Log.d("pref map url -- " , prefMap.toString());
+        Timber.d("pref map url -- " + prefMap.toString());
 
         Boolean mandatoryInputsNotGiven = (Boolean) prefMap.get("mandatoryInputsNotGiven");
 
@@ -200,7 +200,7 @@ public class RssService extends IntentService {
 			URL url = new URL(link);
 			return url.openConnection().getInputStream();
 		} catch (IOException e) {
-			Log.w("Know More", "Exception while retrieving the input stream", e);
+			Timber.w(R.string.app_name + "Exception while retrieving the input stream", e);
             throw e;
 		}
 	}
