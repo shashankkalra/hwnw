@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "976885803741",
+    "firebase_url": "https://hwnw-406a7.firebaseio.com",
+    "project_id": "hwnw-406a7",
+    "storage_bucket": "hwnw-406a7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:976885803741:android:921ae7635e2400b2",
+        "android_client_info": {
+          "package_name": "com.skapps.knowMore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "976885803741-oq22r1r4gh4p83p68c7fbm5e91n57id7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.skapps.knowMore",
+            "certificate_hash": "2FF84BBD56F519B2E589763727E0F5A5D872358F"
+          }
+        },
+        {
+          "client_id": "976885803741-uhdbq38brv3c339l8cs475qevvvonhcv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-RIQkkErFG90yo1cZBlIpnRBdFyj4_g4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "976885803741-uhdbq38brv3c339l8cs475qevvvonhcv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
