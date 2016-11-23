@@ -1,7 +1,5 @@
 package com.skapps.knowMore;
 
-import java.util.List;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -16,6 +14,11 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
+import java.util.List;
 
 public class RssFragment extends Fragment implements OnItemClickListener {
 
@@ -36,6 +39,12 @@ public class RssFragment extends Fragment implements OnItemClickListener {
 			view = inflater.inflate(R.layout.fragment_layout, container, false);
 			progressBar = (ProgressBar) view.findViewById(R.id.progressBar);
 			listView = (ListView) view.findViewById(R.id.listView);
+			AdView adView = (AdView) view.findViewById(R.id.adView);
+
+			AdRequest adRequest = new AdRequest.Builder()
+					.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+					.build();
+			adView.loadAd(adRequest);
             //SwipeRefreshLayout mSwipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.activity_main_swipe_refresh_layout);
 			listView.setOnItemClickListener(this);
             //swipe to refresh functionality
