@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
@@ -43,14 +42,13 @@ public class MainActivity extends ActionBarActivity implements SharedPreferences
     private void checkPreferencesSetOrNotAndOpenSettingsIfRequired() {
 
         Boolean mandatoryInputsNotGiven = true;
-
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        UserProfileProvider.SharedPreferencesWrapper prefs = UserProfileProvider.getDefaultSharedPreferences(getBaseContext());
         Timber.d("Preferences -- " + prefs.toString());
-        Map<String, ?> prefMap = prefs.getAll();
-        String gender = (String) prefMap.get("gender");
+        //Map<String, ?> prefMap = prefs.getAll();
+        String gender = (String) prefs.getString("gender",null);
 
-        String current_state =  (String) prefMap.get("current_state");
-        String current_city =  (String) prefMap.get("current_city");
+        String current_state =  (String) prefs.getString("current_state",null);
+        String current_city =  (String) prefs.getString("current_city",null);
 
         /*boolean farmerOrNot = (Boolean) prefMap.get("farmer");
         String crop = (String) prefMap.get("crop");*/
@@ -62,9 +60,7 @@ public class MainActivity extends ActionBarActivity implements SharedPreferences
 
         Timber.d("Individual prefs - " + gender + current_state + current_city);
 
-        SharedPreferences.Editor edit = prefs.edit();
-        edit.putBoolean(getString(R.string.pref_mandatoryInputsNotGiven), mandatoryInputsNotGiven);
-        edit.commit();
+        prefs.edit().putBoolean(getString(R.string.pref_mandatoryInputsNotGiven), mandatoryInputsNotGiven).commit();
 
         if(mandatoryInputsNotGiven){
 

@@ -206,8 +206,8 @@ public class UserProfileProvider extends ContentProvider {
         return new Editor(context);
     }
 
-    public static MultiprocessSharedPreferences getDefaultSharedPreferences(Context context){
-        return new MultiprocessSharedPreferences(context);
+    public static SharedPreferencesWrapper getDefaultSharedPreferences(Context context){
+        return new SharedPreferencesWrapper(context);
     }
 
     public static class Editor{
@@ -266,11 +266,11 @@ public class UserProfileProvider extends ContentProvider {
         }
     }
 
-    public static class MultiprocessSharedPreferences{
+    public static class SharedPreferencesWrapper {
 
         private Context context;
 
-        private MultiprocessSharedPreferences(Context context){
+        private SharedPreferencesWrapper(Context context){
             this.context = context;
         }
 
