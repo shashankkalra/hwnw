@@ -7,8 +7,13 @@ import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.widget.RemoteViews;
 import android.widget.Toast;
+
+import com.google.firebase.crash.FirebaseCrash;
+
+import timber.log.Timber;
 
 /**
  * Implementation of App Widget functionality.
@@ -56,6 +61,14 @@ public class hwnwWidget extends AppWidgetProvider {
                 Toast.makeText(context.getApplicationContext(),
                         "There was a problem loading the application: ",
                         Toast.LENGTH_SHORT).show();
+                try {
+                    FirebaseCrash.log("ActivityNotFoundException");
+                    FirebaseCrash.logcat(Log.ERROR, "WIDGET", "ActivityNotFoundException");
+                    FirebaseCrash.report(e);
+                }
+                catch(Exception e1){
+                    Timber.w("error in going to app from widget", e1);
+                }
             }
 
         }

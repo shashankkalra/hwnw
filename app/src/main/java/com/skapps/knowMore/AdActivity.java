@@ -1,16 +1,10 @@
 package com.skapps.knowMore;
 
 import android.app.Activity;
-import android.os.Bundle;
-import android.os.RemoteException;
-import android.view.View;
-import android.view.ViewGroup;
 
-import com.google.android.gms.ads.internal.util.client.zzb;
-import com.google.android.gms.internal.zzfu;
-import com.google.android.gms.internal.zzfv;
+//import com.google.android.gms.internal.zzfu;
 
-public class AdActivity extends Activity {
+public class AdActivity extends Activity {/*
     public static final String CLASS_NAME = "com.google.android.gms.ads.AdActivity";
     public static final String SIMPLE_CLASS_NAME = "AdActivity";
     private zzfv zzoA;
@@ -169,5 +163,5 @@ public class AdActivity extends Activity {
             super.onBackPressed();
         }
 
-    }
+    }*/
 }

@@ -4,6 +4,9 @@ import android.app.IntentService;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.ResultReceiver;
+import android.util.Log;
+
+import com.google.firebase.crash.FirebaseCrash;
 
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -69,6 +72,14 @@ public class RssService extends IntentService {
 
             } catch (XmlPullParserException e) {
                 Timber.w(e.getMessage(), e);
+                try {
+                    FirebaseCrash.log("Parser exception");
+                    FirebaseCrash.logcat(Log.ERROR, "parser", "Parser Exception");
+                    FirebaseCrash.report(e);
+                }
+                catch(Exception e1){
+                    Timber.w("error in generating crash report", e1);
+                }
             } catch (IOException e) {
                 Timber.w(e.getMessage(), e);
                 rssItems.add(new RssItem("Could not connect to internet. Connect to wifi or mobile data and click refresh icon above",null));
